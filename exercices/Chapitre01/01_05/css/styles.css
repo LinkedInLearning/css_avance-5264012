@@ -1,0 +1,11 @@
+body {
+  background-image: radial-gradient(
+      #cfD57f,
+      #f4c670,
+      #f05042,
+      #476c89,
+      #6d649b,
+      #b0f5f0
+    );
+  min-height: 100vh;
+}
