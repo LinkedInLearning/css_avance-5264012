@@ -1,0 +1,11 @@
+body {
+  background-image: linear-gradient(
+      #cfD57f 5px,
+      #f4c670 150px,
+      #f05042 85px,
+      #476c89 85%,
+      #6d649b 90%,
+      #b0f5f0 95%
+    );
+  min-height: 100vh;
+}
