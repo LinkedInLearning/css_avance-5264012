@@ -1,6 +1,11 @@
 /*Import Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+:root {
+    --title-fonts: Monoton, "Times New Roman", serif;
+    --body-fonts: Poppins, Verdana, sans-serif;
+}
+
 body {
     min-height: 100vh;
     background-image:
@@ -20,4 +25,9 @@ body {
     background-repeat: repeat-y, repeat-y, repeat;
     background-position: left top, right top;
     background-blend-mode: normal, normal, overlay;
+    font-family: var(--body-fonts);
+}
+
+#mainHeader h1 {
+    font-family: var(--title-fonts);
 }
