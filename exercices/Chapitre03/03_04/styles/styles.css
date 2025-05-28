@@ -42,6 +42,14 @@
     --space-lg: calc( var(--space-default) * 1.5 );
     --space-xl: calc( var(--space-default) * 2 );
     --space-xxl: calc( var(--space-default) * 3 );
+
+    /*container-max-width*/
+    --container-max-width-sm: 540px;
+    --container-max-width-md: 720px;
+    --container-max-width-lg: 960px;
+    --container-max-width-xl: 1140px;
+    --container-max-width-xxl: 1320px;
+    --container-max-width-xxxl: 1650px;
 }
 
 body {
