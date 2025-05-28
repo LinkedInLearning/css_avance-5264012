@@ -1,0 +1,23 @@
+/*Import Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap') layer(common);
+
+body {
+    min-height: 100vh;
+    background-image:
+        url('../images/pine_left.png'),
+        url('../images/pine_right.png'),
+        url('../images/grains.png'),
+        linear-gradient(
+            135deg,
+            #cfD57f,
+            #f4c670,
+            #f05042,
+            #476c89,
+            #6d649b,
+            #b0f5f0
+        );
+    background-attachment: fixed;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: left top, right top;
+    background-blend-mode: normal, normal, overlay;
+}
