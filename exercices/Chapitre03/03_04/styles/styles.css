@@ -43,13 +43,6 @@
     --space-xl: calc( var(--space-default) * 2 );
     --space-xxl: calc( var(--space-default) * 3 );
 
-    /*container-max-width*/
-    --container-max-width-sm: 540px;
-    --container-max-width-md: 720px;
-    --container-max-width-lg: 960px;
-    --container-max-width-xl: 1140px;
-    --container-max-width-xxl: 1320px;
-    --container-max-width-xxxl: 1650px;
 }
 
 body {
@@ -73,6 +66,8 @@ body {
     background-blend-mode: normal, normal, overlay;
     font-family: var(--body-fonts);
     font-size: var(--txt-size-md);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
 }
 
 #mainHeader h1 {
