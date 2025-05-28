@@ -42,7 +42,6 @@
     --space-lg: calc( var(--space-default) * 1.5 );
     --space-xl: calc( var(--space-default) * 2 );
     --space-xxl: calc( var(--space-default) * 3 );
-
 }
 
 body {
@@ -66,8 +65,6 @@ body {
     background-blend-mode: normal, normal, overlay;
     font-family: var(--body-fonts);
     font-size: var(--txt-size-md);
-    max-width: var(--container-max-width);
-    margin: 0 auto;
 }
 
 #mainHeader h1 {
