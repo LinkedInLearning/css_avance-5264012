@@ -1,0 +1,47 @@
+/*Import Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    /*color scheme*/
+    --danger: #f05042;
+    --success: #66D9AA;
+    --neutral: #f9a340;
+    --accent-1: #79d5cf;
+    --accent-2: #66bcd9;
+    --accent-3: #476c89;
+    --accent-4: #6d649b;
+    --accent-5: #32396A;
+    --foreground-light: #FFFFFF;
+    --foreground-medium: #333333;
+    --foreground-dark: #000000;
+    /*Fonts*/
+    --title-fonts: Monoton, "Times New Roman", serif;
+    --body-fonts: Poppins, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image:
+        url('../images/pine_left.png'),
+        url('../images/pine_right.png'),
+        url('../images/grains.png'),
+        linear-gradient(
+            135deg,
+            var(--success),
+            var(--neutral),
+            var(--danger),
+            var(--accent-3),
+            var(--accent-4),
+            var(--accent-1)
+        );
+    background-attachment: fixed;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: left top, right top;
+    background-blend-mode: normal, normal, overlay;
+    font-family: var(--body-fonts);
+}
+
+#mainHeader h1 {
+    font-family: var(--title-fonts);
+    color: var(--foreground-light);
+}
