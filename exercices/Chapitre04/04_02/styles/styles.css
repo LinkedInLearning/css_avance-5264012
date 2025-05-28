@@ -1,0 +1,332 @@
+/*Import Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap') layer(common);
+
+:root {
+
+    /*color scheme*/
+    --danger: #f05042;
+    --success: #66D9AA;
+    --neutral: #f9a340;
+    --accent-1: #79d5cf;
+    --accent-2: #66bcd9;
+    --accent-3: #476c89;
+    --accent-4: #6d649b;
+    --accent-5: #32396A;
+    --foreground-light: #FFFFFF;
+    --foreground-medium: #333333;
+    --foreground-dark: #000000;
+
+    /*Fonts*/
+    --title-fonts: Monoton, "Times New Roman", serif;
+    --body-fonts: Poppins, Verdana, sans-serif;
+
+    /*font sizes*/
+    --txt-size-default: 1em;
+    --txt-size-xs: calc(var(--txt-size-default) * 0.6);
+    --txt-size-sm: calc(var(--txt-size-default) * 0.8);
+    --txt-size-lg: calc(var(--txt-size-default) * 1.12);
+    --txt-size-xl: calc(var(--txt-size-default) * 1.25);
+    --txt-size-xxl: calc(var(--txt-size-default) * 1.5);
+
+    --title-h1: calc(var(--txt-size-default) * 2.5);
+    --title-h2: calc(var(--txt-size-default) * 2);
+    --title-h3: calc(var(--txt-size-default) * 1.75);
+    --title-h4: calc(var(--txt-size-default) * 1.5);
+    --title-h5: calc(var(--txt-size-default) * 1.25);
+    --title-h6: var(--txt-size-default);
+
+    /*spaces*/
+    --space-default: 1em;
+    --space-xs: calc(var(--space-default) * .25);
+    --space-sm: calc(var(--space-default) * .5);
+    --space-lg: calc(var(--space-default) * 1.5);
+    --space-xl: calc(var(--space-default) * 2);
+    --space-xxl: calc(var(--space-default) * 3);
+
+    /*container-max-width*/
+    --container-max-width-sm: 540px;
+    --container-max-width-md: 720px;
+    --container-max-width-lg: 960px;
+    --container-max-width-xl: 1140px;
+    --container-max-width-xxl: 1320px;
+    --container-max-width-xxxl: 1650px;
+
+    --container-max-width: var(--container-max-width-sm);
+}
+
+/**************************************
+* main styles
+***************************************/
+
+body {
+    min-height: 100vh;
+    background-image:
+        url('../images/pine_left.png'),
+        url('../images/pine_right.png'),
+        url('../images/grains.png'),
+        linear-gradient(135deg,
+            var(--success),
+            var(--neutral),
+            var(--danger),
+            var(--accent-3),
+            var(--accent-4),
+            var(--accent-1));
+    background-attachment: fixed;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: left top, right top, left top;
+    background-blend-mode: normal, normal, overlay, normal;
+    font-family: var(--body-fonts);
+    font-size: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-fonts);
+    font-weight: normal;
+    color: var(--foreground-light);
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+cite {
+    font-size: var(--txt-size-sm);
+}
+
+/**************************************
+* custom reset
+***************************************/
+
+nav {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+        }
+
+        /*end a*/
+    }
+
+    /*end ul*/
+}
+
+/*end nav*/
+
+/**************************************
+* #MainHeader
+***************************************/
+#mainHeader {
+    margin: var(--space-default) var(--space-xl);
+    h1 {
+
+        color: var(--foreground-light);
+        text-align: center;
+        font-size: var(--title-h1);
+    }/*end H1 */
+    #mainNav {
+        display: flex;
+        justify-content: end;
+
+        ul {
+            text-align: right;
+
+            li {
+                margin: var(--space-default) 0;
+
+                a {
+                    padding: var(--space-xs) var(--space-default);
+                    display: inline-block;
+                    background-color: var(--accent-1);
+                    color: var(--foreground-light);
+                    font-size: var(--txt-size-xl);
+                    transition: background-color .3s;
+
+                    &:hover {
+                        background-color: var(--accent-2);
+                    }
+
+                    &.active {
+                        background-color: var(--success);
+                    }
+                }/*end a*/
+            }/*end li*/
+        }/*end ul*/
+    }/*end mainNav */
+}/*end #mainHeader*/
+
+/**************************************
+* #mainContent
+***************************************/
+#mainContent {
+    main {
+        margin: 0 calc(var(--space-xl) * 2);
+
+        blockquote {
+            margin: 0;
+            background-color: var(--accent-1);
+            padding: var(--space-lg);
+            border-left: 20px solid var(--accent-3);
+            clear: both;
+
+            &::before {
+                display: none;
+                float: left;
+                margin-right: var(--space-xs);
+                color: var(--foreground-light);
+                font-size: 700%;
+                content: open-quote;
+                height: 1em;
+            }
+        }/*end blockquote*/
+    }/*end main*/
+}/*end mainContent*/
+
+/**************************************
+* #mainFooter
+***************************************/
+#mainFooter {
+    background-color: var(--accent-2);
+    padding: var(--space-sm) var(--space-default);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #copyright {
+        font-size: var(--txt-size-xs);
+        color: var(--foreground-light);
+
+    }/*end copyright*/
+    #footerNav {
+        font-size: var(--txt-size-sm);
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            a {
+                color: var(--accent-5);
+                transition: color .3s;
+                &:hover {
+                    color: var(--accent-3)
+                }
+            }/*end a*/
+        }/*end ul*/
+    }/*end #footerNav*/
+}/*end #mainFooter*/
+
+/***********************
+* Responsive
+************************/
+@media screen and (min-width: 768px) {
+    :root {
+        --container-max-width: var(--container-max-width-md);
+        ;
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    img.alignRight {
+        width: 50%;
+        float: right;
+        margin-bottom: var(--space-default);
+        margin-left: var(--space-default);
+    }
+
+    img.alignLeft {
+        width: 50%;
+        float: left;
+        margin-bottom: var(--space-default);
+        margin-right: var(--space-default);
+    }
+
+    #mainContent {
+        main {
+            blockquote {
+                width: 35%;
+                float: left;
+                margin-right: var(--space-default);
+
+                &::before {
+                    display: block;
+                }
+            }
+        }/*end main*/
+    }/*end #mainContent*/
+    #mainFooter {
+        #footerNav {
+            ul {
+                flex-direction: row;
+                gap: var(--space-default);
+            }/*end ul*/
+        }/*end footerNav*/
+    }/*end #mainFooter*/
+}
+
+@media screen and (min-width: 992px) {
+    :root {
+        --container-max-width: var(--container-max-width-lg);
+        ;
+    }
+
+    #mainContent {
+        main {
+            margin: 0 var(--space-xl);
+        }
+    }/*end #mainContent*/
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --container-max-width: var(--container-max-width-xl);
+        ;
+    }
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    img.alignRight {
+        width: 30%;
+    }
+
+    img.alignLeft {
+        width: 30%;
+    }
+
+    #mainContent {
+        main {
+            margin: auto;
+        }
+    }/*end #mainContent*/
+}
+
+@media screen and (min-width: 1400px) {
+    :root {
+        --container-max-width: var(--container-max-width-xxl);
+        ;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    :root {
+        --container-max-width: var(--container-max-width-xxxl);
+        ;
+    }
+}
