@@ -112,12 +112,17 @@ img {
     height: auto;
 }
 
-button {
+button,
+a.btn {
     border-radius: 50px;
     border: 1px solid var(--accent-5);
     padding-inline: var(--space-default);
     padding-block: var(--space-sm);
     background-color: var(--accent-1);
+    transition: background-color .3s;
+    &:hover {
+        background-color: var(--accent-2);
+    }
 }
 
 cite {
@@ -129,7 +134,6 @@ nav {
         padding: 0;
         margin: 0;
         list-style-type: none;
-
         a {
             text-decoration: none;
         }/*end a*/
@@ -147,7 +151,6 @@ fieldset {
     border-radius: 5px;
     border: 1px solid var(--accent-1);
     margin-block-end: var(--space-default);
-
     legend {
         border: inherit;
         padding: var(--space-xs);
@@ -160,8 +163,8 @@ input:not([type="checkbox"], [type="radio"]),
 select,
 textarea {
     padding: var(--space-sm);
-    border: 2px solid var(--foreground-dark);
     border-radius: 5px;
+    border: 2px solid var(--foreground-dark);
     font-size: var(--txt-size-sm);
     font-family: monospace;
 }
@@ -176,12 +179,32 @@ textarea {
 }
 
 /**************************************
+* #utilities
+***************************************/
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+input.search {
+    background-image: url('../images/magnifier.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 70%;
+    background-origin: content-box;
+}
+
+/**************************************
 * #MainHeader
 ***************************************/
 #mainHeader {
     margin-block: var(--space-default);
-    margin-inline: var(--space-xl);
-
+    padding-inline: var(--space-default);
+    width: 100%;
     h1 {
         color: var(--foreground-light);
         text-align: center;
@@ -190,13 +213,10 @@ textarea {
     #mainNav {
         display: flex;
         justify-content: end;
-
         ul {
             text-align: end;
-
             li {
                 margin-block: var(--space-default);
-
                 a {
                     padding-block: var(--space-xs);
                     padding-inline: var(--space-default);
@@ -205,11 +225,9 @@ textarea {
                     color: var(--foreground-light);
                     font-size: var(--txt-size-xl);
                     transition: background-color .3s;
-
                     &:hover {
                         background-color: var(--accent-2);
                     }
-
                     &.active {
                         background-color: var(--success);
                     }
@@ -220,28 +238,33 @@ textarea {
 }/*end #mainHeader*/
 
 /**************************************
+* #mainContent
+***************************************/
+#mainContent {
+    padding-inline: var(--space-default);
+    a {
+        color: var(--accent-5);
+        text-decoration: none;
+        transition: color .3s;
+        &:hover {
+            color: var(--accent-4);
+        }
+    }/* end a*/
+}/*end #mainContent*/
+
+
+/**************************************
 * #mainContent.text
 ***************************************/
 #mainContent.text {
     main {
         margin-inline: calc(var(--space-xl) * 2);
-
-        a {
-            color: var(--accent-5);
-            text-decoration: none;
-            transition: color .3s;
-
-            &:hover {
-                color: var(--accent-4);
-            }
-        }/*end a*/
         blockquote {
             margin: 0;
             background-color: var(--accent-1);
             padding: var(--space-lg);
             border-inline-start: 20px solid var(--accent-3);
             clear: both;
-
             &::before {
                 display: none;
                 float: inline-start;
@@ -256,11 +279,70 @@ textarea {
 }/*end mainContent*/
 
 /**************************************
+* #mainContent.collection
+***************************************/
+#mainContent.collection {
+    display: grid;
+    gap: var(--space-default);
+    main {
+        display: grid;
+        gap: var(--space-default);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        article {
+            border: 1px solid var(--foreground-light);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(135deg,
+                    rgb(from var(--accent-1) r g b / .8) 25%,
+                    rgb(from var(--neutral) r g b / .8),
+                    rgb(from var(--danger) r g b / .8));
+            font-size: var(--txt-size-sm);
+            img {
+                border-start-start-radius: 5px;
+                border-start-end-radius: 5px;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }/* end img*/
+            h1,
+            .article-body,
+            footer {
+                padding-block: var(--space-xs);
+                padding-inline: var(--space-sm);
+            }/*end h1, .article-body, footer*/
+            h1 {
+                margin: 0;
+            }/*end h1*/
+            .article-body {
+                p {
+                    margin-block: var(--space-sm);
+                }
+            }/*end .article-body*/
+            footer {
+                margin-block-start: auto;
+                display: flex;
+                justify-content: space-between;
+            }/*end footer*/
+        }/*end article*/
+    }/*end main*/
+    aside {
+        background-color: var(--foreground-light);
+        border-radius: 5px;
+        border: 2px solid var(--accent-5);
+        padding: var(--space-default);
+        h1 {
+            color: var(--accent-5);
+        }/* end h1*/
+    }/*end aside*/
+}/*end #mainContent.collection*/
+
+
+/**************************************
 * #mainContent Forms
 ***************************************/
 #mainContent form {
-    margin-inline: auto;
     width: min(100%, 60ch);
+    margin-inline: auto;
     fieldset {
         background-color: rgb(from var(--foreground-light) r g b / .8);
     }
@@ -268,42 +350,42 @@ textarea {
         display: flex;
         flex-direction: column;
         margin-block-end: var(--space-default);
-
         input,
         textarea {
             &:focus {
                 outline-color: var(--accent-2);
             }
-
-            &:user-valid {
+            &:valid {
                 border-color: var(--success);
             }
-
             &:user-invalid {
                 border-color: var(--danger);
-                + p {
+                +p {
                     opacity: 1;
-                }
+                }/*end input:invalid +p */
             }
-        }/*end input textarea*/
-        &:has([type="checkbox"]) {
+        }/*end input*/
+        &:has(input[type="checkbox"]) {
             flex-direction: row;
             align-items: start;
             gap: var(--space-sm);
+
             label {
                 order: 1;
             }
-        }/*end &:has([type="checkbox"])*/
-        &:has([type="checkbox"]:user-invalid) label {
-            color: hsl(from var(--danger) h s 80%);
-        }
+        }/*end :has(input[type="checkbox"])*/
+        &:has(input[type="checkbox"]:user-invalid) {
+            label {
+                color: hsl(from var(--danger) h s 80%);
+            }
+        }/*end :has(input[type="checkbox"]:user-invalid)*/
         &:has(button) {
             flex-direction: row;
             justify-content: center;
-        }/*end &:has(button)*/
+        }/*end :has(button*/
         &:has([required]) label::after {
             content: "*";
-        }/*end &:has([required]) label::after*/
+        }
         p.validation-message {
             color: var(--danger);
             margin: 0;
@@ -311,9 +393,8 @@ textarea {
             opacity: 0;
         }
     }/*end form-control*/
-}
+}/*end #mainContent form*/
 
-/*end #mainContent form*/
 /**************************************
 * #mainFooter
 ***************************************/
@@ -325,25 +406,19 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     #copyright {
         font-size: var(--txt-size-xs);
         color: var(--foreground-light);
-    }
-
-    /*end copyright*/
+    }/*end copyright*/
     #footerNav {
         font-size: var(--txt-size-sm);
-
         ul {
             display: flex;
             flex-direction: column;
             gap: var(--space-sm);
-
             a {
                 color: var(--accent-5);
                 transition: color .3s;
-
                 &:hover {
                     color: var(--accent-3)
                 }
@@ -358,7 +433,6 @@ textarea {
 @media screen and (min-width: 768px) {
     :root {
         --container-max-width: var(--container-max-width-md);
-        ;
     }
 
     body {
@@ -385,7 +459,6 @@ textarea {
                 width: 35%;
                 float: inline-start;
                 margin-inline-end: var(--space-default);
-
                 &::before {
                     display: block;
                 }
@@ -407,31 +480,33 @@ textarea {
 @media screen and (min-width: 992px) {
     :root {
         --container-max-width: var(--container-max-width-lg);
-        ;
     }
-
     #mainContent {
-        main {
-            margin-inline: var(--space-xl);
-        }
+        &.collection {
+            grid-template-columns: 2fr 1fr;
+            aside {
+                align-self: start;
+                position: sticky;
+                top: var(--space-default);
+            }/*end aside*/
+        }/*end &.collection*/
     }/*end #mainContent*/
 }
 
 @media screen and (min-width: 1200px) {
     :root {
         --container-max-width: var(--container-max-width-xl);
-        ;
     }
 
     body {
         font-size: 1.5rem;
     }
 
-    img.alignEnd {
+    img.alignRight {
         width: 30%;
     }
 
-    img.alignStart {
+    img.alignLeft {
         width: 30%;
     }
 
@@ -445,13 +520,17 @@ textarea {
 @media screen and (min-width: 1400px) {
     :root {
         --container-max-width: var(--container-max-width-xxl);
-        ;
     }
+
+    #mainContent.collection {
+        main {
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        }/*end main*/
+    }/*end #mainContent.collection*/
 }
 
 @media screen and (min-width: 1700px) {
     :root {
         --container-max-width: var(--container-max-width-xxxl);
-        ;
     }
 }
