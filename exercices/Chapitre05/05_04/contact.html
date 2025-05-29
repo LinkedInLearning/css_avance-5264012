@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/form-validation.js" defer></script>
+</head>
+<body>
+    <header id="mainHeader" class="container">
+        <nav id="mainNav">
+            <ul>
+                <li><a href="text.html">Accueil</a></li>
+                <li><a href="#">Agenda</a></li>
+                <li><a href="#">En pratique</a></li>
+                <li><a href="#">Témoignages</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Let's Party!</h1>
+    </header>
+    <section id="mainContent" class="container text">
+        <main>
+            <p>Lorem ipsum, dolor sit amet <a href="#">consectetur adipisicing</a> elit. Assumenda corrupti fuga, quod voluptatum error laborum provident velit amet beatae facilis, explicabo rem voluptatibus excepturi, quasi sapiente! Sapiente laudantium fugit corporis.</p>
+            <p>Veritatis facere ipsa <a href="#" target="_blank">accusamus voluptatem</a> accusantium odio magni, quis asperiores molestiae, reprehenderit dolore eos error atque. Repudiandae nesciunt, magnam cupiditate ex, quo aspernatur, veniam error animi illum consequuntur molestiae provident!</p>
+            <h2>Formulaire de contact</h2>
+            <form action="#" id="contactFrm" novalidate>
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <div class="form-control">
+                        <label for="firstName">Prénom</label>
+                        <input type="text" name="firstName" id="firstName" required placeholder="Prénom">
+                        <p class="validation-message">Veuillez indiquer votre prénom.</p>
+                    </div>
+                    <div class="form-control">
+                        <label for="lastName">Nom de famille</label>
+                        <input type="text" name="lastName" id="lastName" required placeholder="Nom de Famille">
+                        <p class="validation-message">Veuillez indiquer votre nom de famille.</p>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required placeholder="Email">
+                        <p class="validation-message">Assurez-vous d'entrer une adresse email valide.</p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-control">
+                        <label for="subject">Sujet</label>
+                        <select name="subject" id="subject">
+                            <option value="contact">Prise de contact</option>
+                            <option value="info">Demande d'informations</option>
+                            <option value="testimony">Témoignage</option>
+                            <option value="complaint">Plainte</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    <legend>Votre message</legend>
+                    <div class="form-control">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="8" required></textarea>
+                        <p class="validation-message">N'oubliez pas d'entrer votre message.</p>
+                    </div>
+                    
+                </fieldset>
+                <div class="form-control">
+                    <label for="privacy">J'accepte la collecte et le traitement de mes données dans le cadre du suivi de ma demande.</label>
+                    <input type="checkbox" name="privacy" id="privacy" required >
+                </div>
+                <div class="form-control">
+                    <button type="submit">Envoyer</button>
+                </div>
+            </form>
+        </main>
+    </section>
+    <footer id="mainFooter">
+        <p id="copyright">&copy; let'sParty 2025</p>
+        <nav id="footerNav">
+            <ul>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Vie Privée</a></li>
+                <li><a href="#">Conditions d'utilisation</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
