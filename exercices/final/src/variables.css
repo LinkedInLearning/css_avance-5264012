@@ -1,0 +1,52 @@
+:root {
+    color-scheme: light dark;
+    /*color scheme*/
+    --danger: #f05042;
+    --success: #66D9AA;
+    --neutral: #f9a340;
+    --accent-1: #b1fffa;
+    --accent-2: #66bcd9;
+    --accent-3: #476c89;
+    --accent-4: #6d649b;
+    --accent-5: #32396A;
+    --foreground-light: #FFFFFF;
+    --foreground-medium: #333333;
+    --foreground-dark: #000000;
+
+    /*Fonts*/
+    --title-fonts: Monoton, "Times New Roman", serif;
+    --body-fonts: Poppins, Verdana, sans-serif;
+
+    /*font sizes*/
+    --txt-size-default: 1em;
+    --txt-size-xs: calc( var(--txt-size-default) * 0.6 );
+    --txt-size-sm: calc( var(--txt-size-default) * 0.8 );
+    --txt-size-lg: calc( var(--txt-size-default) * 1.12 );
+    --txt-size-xl: calc( var(--txt-size-default) * 1.25 );
+    --txt-size-xxl: calc( var(--txt-size-default) * 1.5 );
+
+    --title-h1: calc( var(--txt-size-default) * 2.5 );
+    --title-h2: calc( var(--txt-size-default) * 2 );
+    --title-h3: calc( var(--txt-size-default) * 1.75 );
+    --title-h4: calc( var(--txt-size-default) * 1.5 );
+    --title-h5: calc( var(--txt-size-default) * 1.25 );
+    --title-h6: var(--txt-size-default);
+
+    /*spaces*/
+    --space-default: 1em;
+    --space-xs: calc( var(--space-default) * .25 );
+    --space-sm: calc( var(--space-default) * .5 );
+    --space-lg: calc( var(--space-default) * 1.5 );
+    --space-xl: calc( var(--space-default) * 2 );
+    --space-xxl: calc( var(--space-default) * 3 );
+
+    /*container-max-width*/
+    --container-max-width-sm: 540px;
+    --container-max-width-md: 720px;
+    --container-max-width-lg: 960px;
+    --container-max-width-xl: 1140px;
+    --container-max-width-xxl: 1320px;
+    --container-max-width-xxxl: 1650px;
+
+    --container-max-width: var(--container-max-width-sm);
+}

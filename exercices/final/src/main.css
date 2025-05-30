@@ -1,0 +1,40 @@
+/**************************************
+* main styles
+***************************************/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: 
+        url('../images/pine_left.png'),
+        url('../images/pine_right.png'),
+        url('../images/grains.png'), 
+        linear-gradient(
+            135deg,
+            var(--success),
+            var(--neutral),
+            var(--danger),
+            var(--accent-3),
+            var(--accent-4),
+            var(--accent-1)
+        );
+    background-attachment: fixed;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: left top, right top, left top;
+    background-blend-mode: normal, normal, overlay, normal;
+    font-family: var(--body-fonts);
+    font-size: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    color: light-dark( var(--foreground-dark), var(--foreground-light) );
+}
+
+.container{
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+}

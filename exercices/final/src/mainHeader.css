@@ -1,0 +1,39 @@
+/**************************************
+* #MainHeader
+***************************************/
+#mainHeader {
+    margin-block: var(--space-default);
+    padding-inline: var(--space-default);
+    width: 100%;
+    h1 {
+        
+        color: var(--foreground-light);
+        text-align: center;
+        font-size: var(--title-h1);
+    }/*end H1 */
+    #mainNav {
+        display: flex;
+        justify-content: end;
+        ul {
+            text-align: end;
+            li {
+                margin-block: var(--space-default);
+                a{
+                    padding-block: var(--space-xs) ;
+                    padding-inline: var(--space-default);
+                    display: inline-block;
+                    background-color: var(--accent-2);
+                    color: var(--foreground-light);
+                    font-size: var(--txt-size-xl);
+                    transition: background-color .3s;
+                    &:hover {
+                        background-color: var(--accent-3);
+                    }
+                    &.active {
+                        background-color: var(--success);
+                    }
+                }/*end a*/
+            }/*end li*/
+        }/*end ul*/
+    }/*end mainNav */
+}/*end #mainHeader*/
