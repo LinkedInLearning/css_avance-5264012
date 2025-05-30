@@ -4,7 +4,7 @@
 h1, h2, h3, h4, h5, h6{
     font-family: var(--title-fonts);
     font-weight: normal;
-    color: light-dark( var(--accent-4), var(--accent-1) );
+    color: var(--accent-1);
 }
 
 img {

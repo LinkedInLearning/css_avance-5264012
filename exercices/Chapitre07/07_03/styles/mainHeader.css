@@ -22,7 +22,7 @@
                     padding-block: var(--space-xs) ;
                     padding-inline: var(--space-default);
                     display: inline-block;
-                    background-color: var(--accent-1);
+                    background-color: var(--accent-2);
                     color: var(--foreground-light);
                     font-size: var(--txt-size-xl);
                     transition: background-color .3s;
