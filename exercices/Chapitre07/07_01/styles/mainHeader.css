@@ -27,7 +27,7 @@
                     font-size: var(--txt-size-xl);
                     transition: background-color .3s;
                     &:hover {
-                        background-color: var(--accent-2);
+                        background-color: var(--accent-3);
                     }
                     &.active {
                         background-color: var(--success);
