@@ -1,0 +1,12 @@
+@layer reset, main, defaults, utilities, content, mediaQueries;
+@import 'normalize.css' layer(reset);
+
+@import 'variables.css' layer(main);
+@import 'main.css' layer(main);
+@import 'defaults.css' layer(defaults);
+@import 'utilities.css' layer(utilities);
+@import 'mainHeader.css' layer(content);
+@import 'mainContent.css' layer(content);
+@import 'forms.css' layer(content);
+@import 'footer.css' layer(content);
+@import 'mediaQueries.css' layer(mediaQueries);

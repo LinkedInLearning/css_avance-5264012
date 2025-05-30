@@ -1,0 +1,17 @@
+/**************************************
+* #utilities
+***************************************/
+.checkbox-list {
+    display: flex;
+    flex-direction:column;
+}
+.w-100 {
+    width: 100%;
+}
+input.search {
+    background-image: url('../images/magnifier.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 70%;
+    background-origin: content-box;
+}

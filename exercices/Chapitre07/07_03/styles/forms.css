@@ -1,0 +1,55 @@
+/**************************************
+* #mainContent Forms
+***************************************/
+#mainContent form {
+    width: min(100%, 60ch);
+    margin-inline: auto;
+    fieldset{
+        background-color: rgb(from var(--foreground-light) r g b / .8);
+    }
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        margin-block-end: var(--space-default);
+        input, textarea{
+            &:focus{
+                outline-color: var(--accent-2);
+            }
+            &:valid{
+                border-color: var(--success);
+            }
+            &:user-invalid{
+                border-color: var(--danger);
+                + p {
+                    opacity: 1;
+                }/*end input:invalid +p */
+            }
+        }/*end input*/
+        &:has(input[type="checkbox"]){
+            flex-direction: row;
+            align-items: start;
+            gap: var(--space-sm);
+            label {
+                order: 1;
+            }
+        }/*end :has(input[type="checkbox"])*/
+        &:has(input[type="checkbox"]:user-invalid){
+            label {
+                color: hsl( from var(--danger) h s 80%);
+            }
+        }/*end :has(input[type="checkbox"]:user-invalid)*/
+        &:has(button){
+            flex-direction: row;
+            gap: var(--space-sm);
+        }/*end :has(button*/
+        &:has([required]) label::after{
+            content: "*";
+        }
+        p.validation-message{
+            color: var(--danger);
+            margin: 0;
+            font-size: var(--txt-size-sm);
+            opacity: 0;
+        }
+    }/*end form-control*/
+}/*end #mainContent form*/
