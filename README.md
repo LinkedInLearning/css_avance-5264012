@@ -4,7 +4,20 @@ Ce dossier Repository est lié au cours `Nom final de la formation`. Le cours en
 
 ![Nom final de la formation][lil-thumbnail-url] 
 
+[Marketing Paragraph for Codespaces - without Codespaces: _remove all 3 pragraphs_ - with Codespace: _keep the right paragraph_ for the right course type (1 of 3)]
+
+[Practice It: X | All Other [Project Mojo] Courses]
+
 Ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. Consultez la vidéo "Utiliser Codespaces sur GitHub" pour savoir comment démarrer.    
+
+[Hands-On Introduction to X]
+
+La meilleure façon d'apprendre un langage est de l'utiliser dans la pratique. C'est pourquoi ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. Consultez la vidéo "Utiliser Codespaces sur GitHub" pour savoir comment démarrer.    
+
+[Level Up (previously Code Challenges)] 
+
+Ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail.  
+Chaque épisode de la série Level Up offre au moins 12 occasions de s'exercer à la programmation à différents niveaux de difficulté, afin que vous puissiez vous mettre au défi et renforcer ce que vous avez appris. Consultez la vidéo "Utiliser Codespaces sur GitHub" pour savoir comment mettre en place un espace de code.  
 
 DESCRIPTION DE LA FORMATION
 
@@ -19,6 +32,18 @@ La branche `02_03_d` correspond au code du début de la vidéo.
 La branche `02_03_f` correspond au code à la fin de la vidéo.  
 La branche master correspond au code à la fin de la formation. 
 
+Lorsque vous passez d’une branche des fichiers d’exercice à une autre après avoir fait des modifications, il est possible que vous ayez un message d’erreur similaire à : 
+
+	error: Your local changes to the following files would be overwritten by checkout:        [files]
+	Please commit your changes or stash them before you switch branches.
+	Aborting
+
+Afin de résoudre ce souci, vous devez :
+
+	Rajouter les changements au git en utilisant la commande : git add .
+	Enregistrer les changements avec la commande : git commit -m "message de votre choix"
+
+
 ## Installation
 
 1. Pour utiliser ces fichiers d’exercice, vous avez besoin de : 
@@ -31,7 +56,7 @@ La branche master correspond au code à la fin de la formation.
 
 **Nom du formateur** 
 
- Retrouvez mes autres formations sur [LinkedIn Learning][lil-URL-trainer].
+Retrouvez mes autres formations sur [LinkedIn Learning][lil-URL-trainer].
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com
