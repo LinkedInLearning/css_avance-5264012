@@ -4,9 +4,9 @@ Ce dossier Repository est lié au cours `CSS : Astuces et techniques`. Le cours 
 
 ![Nom final de la formation][lil-thumbnail-url] 
 
-[Marketing Paragraph for Codespaces - without Codespaces: _remove all 3 pragraphs_ - with Codespace: _keep the right paragraph_ for the right course type (1 of 3)]
+Ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. Consultez la vidéo "Utiliser Codespaces sur GitHub" pour savoir comment démarrer.    
 
-DESCRIPTION DE LA FORMATION
+Damien Bruyndonckx vous guide à travers des astuces et techniques sur CSS pour perfectionner vos compétences en conception web. Vous apprendrez à créer des dégradés linéaires, radiaux et côniques, à utiliser plusieurs images de fond et à maîtriser des syntaxes récentes comme les propriétés personnalisées et les propriétés logiques. La formation explore aussi des sélecteurs et pseudo-classes avancés, des media queries et l’optimisation des projets CSS avec des outils comme @import et les CSS layers. Un cours essentiel pour aller au-delà des bases et optimiser vos feuilles de style CSS.
 
 ## Instructions
 
